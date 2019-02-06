@@ -1,7 +1,7 @@
 ---
-title: a little
+title: markdown快捷键
 date: 2018-10-18 10:47:44
-tags: operation
+tags: 常用软件快捷键
 categories: 11
 ---
 # 1. 标题

@@ -1,0 +1,29 @@
+---
+title: 写一篇博客2
+date: 2019-02-06 21:59:06
+tags: 杂乱的理解
+---
+
+新建一篇博客2
+
+​    hexo new post "article title"
+
+然后在D:\hexo\sourse\_posts里打开用MarDown编辑器编辑
+
+编辑好后
+
+hexo g // 生成 hexo generate  
+
+hexo s //(完整命令为hexo server)，用于启动服务器，主要用来本地预览
+
+hexo d // 部署 hexo delay
+
+也可以执行下面的命令，相当于上面两条命令的效果
+
+hexo d -g #在部署前先生成
+
+如果碰到没有修改，可以先尝试
+
+hexo clean  
+
+清理下database文件夹以及public文件夹
