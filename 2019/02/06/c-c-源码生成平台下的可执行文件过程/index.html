@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="杂乱的理解," />
 
 
 
@@ -79,15 +79,17 @@
 
 
 
-<meta name="description" content="Life is hard">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr. He&#39;s hippo">
-<meta property="og:url" content="http://DarlingCake.github.io/archives/2019/02/index.html">
+<meta name="description" content="最主要的事三个步骤：预处理、编译、链接 预处理​    将宏、条件编译指令、头文件包含等指令进行展开，进行代码替换的工作 预处理后，不存在任何的宏指令。但展开后仍然是代码，可读。 编译​    将c/c++代码翻译成汇编代码，然后翻译成平台的机器代码。最终会生成一个同名的目标文件，其后缀名为.o，或者.obj，目标文件以二进制形式存在。 一个目标文件通常有两个段： ​    1.代码段 ​">
+<meta name="keywords" content="杂乱的理解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c&#x2F;c++源码生成平台下的可执行文件过程">
+<meta property="og:url" content="http://DarlingCake.github.io/2019/02/06/c-c-源码生成平台下的可执行文件过程/index.html">
 <meta property="og:site_name" content="Mr. He&#39;s hippo">
-<meta property="og:description" content="Life is hard">
+<meta property="og:description" content="最主要的事三个步骤：预处理、编译、链接 预处理​    将宏、条件编译指令、头文件包含等指令进行展开，进行代码替换的工作 预处理后，不存在任何的宏指令。但展开后仍然是代码，可读。 编译​    将c/c++代码翻译成汇编代码，然后翻译成平台的机器代码。最终会生成一个同名的目标文件，其后缀名为.o，或者.obj，目标文件以二进制形式存在。 一个目标文件通常有两个段： ​    1.代码段 ​">
+<meta property="og:updated_time" content="2019-02-06T13:58:38.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr. He&#39;s hippo">
-<meta name="twitter:description" content="Life is hard">
+<meta name="twitter:title" content="c&#x2F;c++源码生成平台下的可执行文件过程">
+<meta name="twitter:description" content="最主要的事三个步骤：预处理、编译、链接 预处理​    将宏、条件编译指令、头文件包含等指令进行展开，进行代码替换的工作 预处理后，不存在任何的宏指令。但展开后仍然是代码，可读。 编译​    将c/c++代码翻译成汇编代码，然后翻译成平台的机器代码。最终会生成一个同名的目标文件，其后缀名为.o，或者.obj，目标文件以二进制形式存在。 一个目标文件通常有两个段： ​    1.代码段 ​">
 
 
 
@@ -117,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://DarlingCake.github.io/archives/2019/02/"/>
+  <link rel="canonical" href="http://DarlingCake.github.io/2019/02/06/c-c-源码生成平台下的可执行文件过程/"/>
 
 
 
 
 
-  <title>Archiv | Mr. He's hippo</title>
+  <title>c/c++源码生成平台下的可执行文件过程 | Mr. He's hippo</title>
   
 
 
@@ -142,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,222 +278,160 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/c-c-源码生成平台下的可执行文件过程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">c/c++源码生成平台下的可执行文件过程</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:57:30+08:00">
+                2019-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Öhm..! Insgesamt 7 Artikel. Bleib dran.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/06/github快捷键/" itemprop="url">
-              
-                <span itemprop="name">github快捷键</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-06T22:00:28+08:00"
-              content="2019-02-06" >
-          02-06
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/06/c-c-源码生成平台下的可执行文件过程/" itemprop="url">
-              
-                <span itemprop="name">c/c++源码生成平台下的可执行文件过程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-06T21:57:30+08:00"
-              content="2019-02-06" >
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/06/MinGW各个Package的作用/" itemprop="url">
-              
-                <span itemprop="name">MinGW各个Package的作用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-06T21:50:54+08:00"
-              content="2019-02-06" >
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>最主要的事三个步骤：预处理、编译、链接</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>​    将宏、条件编译指令、头文件包含等指令进行展开，进行代码替换的工作</p>
+<p>预处理后，不存在任何的宏指令。但展开后仍然是代码，可读。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>​    将c/c++代码翻译成汇编代码，然后翻译成平台的机器代码。最终会生成一个同名的目标文件，其后缀名为.o，或者.obj，目标文件以二进制形式存在。</p>
+<p>一个目标文件通常有两个段：</p>
+<p>​    1.代码段</p>
+<p>​    2.数据段</p>
+<p>​    这一步最耗费时间</p>
+<h3 id="3-链接"><a href="#3-链接" class="headerlink" title="3. 链接"></a>3. 链接</h3><p>​    将2中生成的目标文件与各种所需的库文件进行链接，生成平台可执行文件。</p>
+<p>​    （除了负责目标文件与库文件进行链接，还负责未解决的符号的链接）</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/06/cmder快捷键/" itemprop="url">
-              
-                <span itemprop="name">cmder快捷键</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-06T21:46:54+08:00"
-              content="2019-02-06" >
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/06/重装系统后重新部署hexo（借鉴）/" itemprop="url">
-              
-                <span itemprop="name">重装系统后重新部署hexo（借鉴）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-06T21:27:33+08:00"
-              content="2019-02-06" >
-          02-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/杂乱的理解/" rel="tag"># 杂乱的理解</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/06/MinGW各个Package的作用/" rel="next" title="MinGW各个Package的作用">
+                <i class="fa fa-chevron-left"></i> MinGW各个Package的作用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/06/github快捷键/" rel="prev" title="github快捷键">
+                github快捷键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -499,6 +439,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -519,8 +463,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -600,6 +553,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#预处理"><span class="nav-number">1.</span> <span class="nav-text">预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译"><span class="nav-number">2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-链接"><span class="nav-number">3.</span> <span class="nav-text">3. 链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -747,6 +716,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -291,6 +291,824 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/github快捷键/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/06/github快捷键/" itemprop="url">github快捷键</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T22:00:28+08:00">
+                2019-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>git status 查看状态</li>
+<li>git pull从远程仓库拿下来</li>
+<li>rm ###.###删除</li>
+<li>git rm ###.###从版本库删除该文件并git commit</li>
+<li>cd D:某个位置</li>
+<li>git init 初始化</li>
+<li>git diff 文件名：查看上次修改了什么内容</li>
+<li>git log查看不同版本</li>
+<li>git log –pretty=oneline精简</li>
+<li>git add 文件名</li>
+<li>git commit -m”备注做了什么事情”</li>
+<li>git reset –hard HEAD~1..100,回退前几个版本。HEAD^上一个版本，HEAD^^上上个版本；；既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本</li>
+<li>git reset –hard （commit id的前五个）：就可以到回退的版本</li>
+<li>git reflog 记录了每一次的命令</li>
+<li>git checkout – 文件名 :回到最近一次commit或add时的状态</li>
+<li>rm file 删除某个文件，在当前版本库中</li>
+<li>git rm file确实从版本库删除</li>
+<li>git push origin matser把本地的master分支最近修改推送至GitHub</li>
+<li>git remote add origin git@github.com:DarlingCake/(本地名字).git关联远程库，然后再git push -u origin master.其中-u第一次不仅远程，还可以关联，对以后简化命令</li>
+<li>git clone git@github.com:DarlingCake/(repositoriesName).git克隆本地库</li>
+<li>git checkout -b <name>。加-b参数表示创建并且换可以看做git branch 分支名，再git checkout 分支名。</name></li>
+<li>git branch查看当前分支</li>
+<li>git checkout <name>：切换分支</name></li>
+<li>git merge <name>：用于合并指定分支到当前分支。</name></li>
+<li>git branch -d <name>，delete吗，就是删除分支</name></li>
+<li>git log –graph –pretty=oneline –abbrev-commit,看看分支历史</li>
+<li>git stash把当前的工作现场储存起来</li>
+<li>git stash list查看刚才工作现场存哪了</li>
+<li>git stash apply恢复现场，但stash不删除，需要git stash drop删除</li>
+<li>另一种git stash pop恢复的同时删除stash</li>
+<li>git stash apply stash@{number}而多次stash，恢复用这个恢复指定的stash</li>
+<li>git remote：查看远程仓库的信息，git remote -v,查看更详细的内容</li>
+<li>git push origin master推送整个分支</li>
+<li>git push origin <name>推送分支</name></li>
+<li>git tag <name>可以打一个新标签，先切换到需要打标签的分支上</name></li>
+<li>git tag 查看所有的标签</li>
+<li>git tag -d <tagname>则是删除标签</tagname></li>
+<li>git tag <tagname> <commit id="">对某次commit打标签，则是对对应的commit id进行打标签</commit></tagname></li>
+<li>git show <tagname>可以查看标签信息，标签按字母排序</tagname></li>
+<li>git tag -a <tagname> -m”说明文字” <commit id="">这样可以创建带有说明的标签，再用上一个，可以看说明文字</commit></tagname></li>
+<li>git push origin <tagname>推送标签到远程git push origin –tags一次性全部推</tagname></li>
+<li>git push origin :refs/tags/<tagname>远程删除标签</tagname></li>
+</ul>
+<p>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；</p>
+<p>关联后，使用命令git push -u origin master第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/c-c-源码生成平台下的可执行文件过程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/06/c-c-源码生成平台下的可执行文件过程/" itemprop="url">c/c++源码生成平台下的可执行文件过程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:57:30+08:00">
+                2019-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最主要的事三个步骤：预处理、编译、链接</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>​    将宏、条件编译指令、头文件包含等指令进行展开，进行代码替换的工作</p>
+<p>预处理后，不存在任何的宏指令。但展开后仍然是代码，可读。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>​    将c/c++代码翻译成汇编代码，然后翻译成平台的机器代码。最终会生成一个同名的目标文件，其后缀名为.o，或者.obj，目标文件以二进制形式存在。</p>
+<p>一个目标文件通常有两个段：</p>
+<p>​    1.代码段</p>
+<p>​    2.数据段</p>
+<p>​    这一步最耗费时间</p>
+<h3 id="3-链接"><a href="#3-链接" class="headerlink" title="3. 链接"></a>3. 链接</h3><p>​    将2中生成的目标文件与各种所需的库文件进行链接，生成平台可执行文件。</p>
+<p>​    （除了负责目标文件与库文件进行链接，还负责未解决的符号的链接）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/MinGW各个Package的作用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/06/MinGW各个Package的作用/" itemprop="url">MinGW各个Package的作用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:50:54+08:00">
+                2019-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ps:各个Package的作用：</p>
+<h2 id="MinGW"><a href="#MinGW" class="headerlink" title="MinGW"></a>MinGW</h2><ul>
+<li><p>MinGW Base System</p>
+</li>
+<li><p>MinGW Compiler Suit</p>
+</li>
+<li><p>mingw32-binutils 必选，用于编译生成的 .o 文件的链接、汇编、生成静态库等。</p>
+</li>
+<li><p>mingw32-gcc 必选，核心的 C 编译器。</p>
+</li>
+<li><p>mingw32-gcc-ada 可选，Ada 编译器。</p>
+</li>
+<li><p>mingw32-gcc-fortran 可选，Fortran 编译器。</p>
+</li>
+<li><p>mingw32-gcc-g++ 建议，C++ 编译器。</p>
+</li>
+<li><p>mingw32-gcc-objc 可选，Objective-C 编译器。</p>
+</li>
+<li><p>mingw32-gcc-v3-* 不建议，第三版 GCC 编译器。</p>
+</li>
+<li><p>mingw32-libgcc 必需，C 编译器编译出来的程序的运行库。</p>
+</li>
+<li><p>mingw32-libgfortran 可选，如选择了 Fortran 编译器，则必选，Fortran 运行库。</p>
+</li>
+<li><p>mingw32-libgnat 可选，如选择了 Ada 编译器，则必选，Ada 运行库。</p>
+</li>
+<li><p>mingw32-libobjc 可选，如选择了 Objective-C 编译器，则必选，Objective-C 运行库。</p>
+</li>
+<li><p>mingw32-libstdc++ 可选，如选择了 C++ 编译器，则必选，C++ 运行库。</p>
+</li>
+<li><p>mingw32-libgomp 可选，GNU OpenMP 库，高精度运算。</p>
+</li>
+<li><p>mingw32-libquadmath 可选，QuadMath 库，数学运行。</p>
+</li>
+<li><p>mingw32-libssp 可选，StackProtect 库，栈保护。</p>
+</li>
+<li><p>mingw32-mingwrt 必选，MinGW 工具的运行库。</p>
+</li>
+<li><p>mingw32-w32api 必选，运行 Windows 程序所必需的 DLL 文件。</p>
+</li>
+<li><p>MinGW Source-Level Debugger</p>
+</li>
+<li><p>mingw32-gdb 可选，GNU Debugger，命令窗口的调试器。</p>
+</li>
+<li><p>MinGW Standard Libraries</p>
+</li>
+<li><p>mingw32-gmp 可选，GNU 多精度运算库。</p>
+</li>
+<li><p>mingw32-libgmp 可选，GMP 库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libgmpxx 可选，GMP 库用于 C++ 的 DLL 文件。</p>
+</li>
+<li><p>mingw32-mpfr 可选，MPFR 多精度运算库。</p>
+</li>
+<li><p>mingw32-libmpfr 可选，MPFR 多精度浮点运算库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-mpc 可选，MPC 多精度运算库。</p>
+</li>
+<li><p>mingw32-libmpc 可选，MPC 多精度浮点运算库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libpthread-old 可选，旧版本的 POSIX 线程库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libpthreadgc 可选，标准的 POSIX 线程库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libpthreadgce 可选，使用 C++ 异常处理的 POSIX 线程库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libquserex 可选，用于内核态的 POSIX 线程库的 DLL 文件。</p>
+</li>
+<li><p>mingw32-libz 可选，zlib 库，用于 Zip 压缩及解压。</p>
+</li>
+<li><p>mingw32-mingwrt 必选，MinGW 的开发库。</p>
+</li>
+<li><p>mingw32-pthreads-w32 可选，POSIX 线程库的开发文件。</p>
+</li>
+<li><p>mingw32-w32api 必选，Win32 SDK 的开发库。</p>
+</li>
+<li><p>inGW Libraries</p>
+</li>
+<li><p>MinGW Supplementary Libraries</p>
+</li>
+<li><p>mingw32-lua 可选，Lua 语言的编译器、运行库等。</p>
+</li>
+<li><p>MinGW Contributed Libraries</p>
+</li>
+<li><p>mingw32-libunistring 可选，Unicode 字符串处理库。</p>
+</li>
+<li><p>MinGW Contributed</p>
+</li>
+<li><p>MinGW Contributed Applications</p>
+</li>
+<li><p>mingw32-tcl 可选，Tool Command Language，tcl 语言。</p>
+</li>
+<li><p>mingw32-tk 可选，tcl 语言的图形用户界面。</p>
+</li>
+<li><p>mingw32-xerces-c 可选，Xerces-C++ XML 解析库。</p>
+</li>
+<li><p>MinGW Autotools</p>
+</li>
+<li><p>mingw32-autoconf 可选，用于 MSYS，Autoconf 的封装脚本</p>
+</li>
+<li><p>mingw32-autoconf2.* 可选，最好全选，自动配置脚本生成工具。</p>
+</li>
+<li><p>mingw32-automake 可选，用于 MSYS，Automake 的封装脚本</p>
+</li>
+<li><p>mingw32-automake1.* 可选，最好全选，自动 Makefile 生成工具。</p>
+</li>
+<li><p>mingw32-autotools 可选，用于 MSYS，自动选择 autoconf automake 等 Package。</p>
+</li>
+<li><p>mingw32-gettext 建议，GNU 软件国际化（即多语言）库。</p>
+</li>
+<li><p>mingw32-libasprintf 建议，GNU 软件国际化库。</p>
+</li>
+<li><p>mingw32-libcharset 可选，字符集转换库。</p>
+</li>
+<li><p>mingw32-libgettextpo 建议，GNU 软件国际化（即多语言）库。</p>
+</li>
+<li><p>mingw32-libiconv 可选，字符集转换库。</p>
+</li>
+<li><p>mingw32-libintl 建议，GNU 软件国际化库的运行时 DLL 文件。</p>
+</li>
+<li><p>mingw32-libltdl 可选，可移植的 dlopen 替代库。</p>
+</li>
+<li><p>mingw32-libtool 可选，共享库生成工具。</p>
+</li>
+</ul>
+<h2 id="MSYS"><a href="#MSYS" class="headerlink" title="MSYS"></a>MSYS</h2><ul>
+<li><p>MSYS Base System</p>
+</li>
+<li><p>msys-base 可选，自动选择 MSYS 开发环境所需的一般的 Package。</p>
+</li>
+<li><p>msys-bash 必选，Bash (Bourne Again SHell)，脚本解释器。</p>
+</li>
+<li><p>msys-bzip2 建议，bzip2 工具及开发库、运行库。</p>
+</li>
+<li><p>msys-core 必选，MSYS 核心文件。</p>
+</li>
+<li><p>msys-coreutils 必选，MSYS 核心工具。</p>
+</li>
+<li><p>msys-diffutils 建议，文件差别比较工具。</p>
+</li>
+<li><p>msys-dos2unix 可选，将 DOS (即 Windows) 换行符转换为 Unix 换行符。</p>
+</li>
+<li><p>msys-file 可选，判断文件类型的工具。</p>
+</li>
+<li><p>msys-findutils 建议，查找文件的工具。</p>
+</li>
+<li><p>msys-gawk 建议，字符串型 (Pattern) 扫描和处理语言的解释器。</p>
+</li>
+<li><p>msys-grep 建议，打印匹配型 (Pattern) 的字符串的工具。</p>
+</li>
+<li><p>msys-gzip 建议，gzip 工具及开发库、运行库。</p>
+</li>
+<li><p>msys-less 建议，命令行的文本查看器。</p>
+</li>
+<li><p>msys-locate 可选，基于数据库的 ‘find’ 工具。</p>
+</li>
+<li><p>msys-m4 建议，GNU 宏处理器。</p>
+</li>
+<li><p>msys-make 建议，GNU Make 工具。</p>
+</li>
+<li><p>msys-patch 建议，文件打补丁工具。</p>
+</li>
+<li><p>msys-sed 建议，GNU 流编辑器。</p>
+</li>
+<li><p>msys-tar 建议，GNU Tar 文件打包工具。</p>
+</li>
+<li><p>msys-termcap 建议，终端数据库。</p>
+</li>
+<li><p>msys-texinfo 建议，显示帮助文件的工具。</p>
+</li>
+<li><p>msys-tiny 可选，自动选择 MSYS 所需的最少 Package。</p>
+</li>
+<li><p>msys-xz 建议，lzma 工具及开发库、运行库。</p>
+</li>
+<li><p>MinGW Developer Toolkit</p>
+</li>
+<li><p>mingw-developer-toolkit 建议，自动选择 MSYS 环境下用于 MinGW 开发所需的 Package。</p>
+</li>
+<li><p>msys-autogen 建议，简化程序的生成，配合 autotool 使用。</p>
+</li>
+<li><p>msys-bison 建议，GNU 语法分析器生成器。</p>
+</li>
+<li><p>msys-bsdcpio 可选，BDS 版的 cpio 工具。</p>
+</li>
+<li><p>msys-bsdtar 可选，BSD 版的 tar 工具。</p>
+</li>
+<li><p>msys-cvs 可选，CVS 版本控制工具。</p>
+</li>
+<li><p>msys-diffstat 可选，diff 工具生成文件的查看器。</p>
+</li>
+<li><p>msys-flex 建议，快速词汇分析器生成器，一般和 bison 一起使用。</p>
+</li>
+<li><p>msys-guile 建议，Scheme 解释器和库。</p>
+</li>
+<li><p>msys-help2man 可选，生成 man 页面。</p>
+</li>
+<li><p>msys-inetutils 可选，通用网络客户端，包括 telnet ftp 等。</p>
+</li>
+<li><p>msys-libopenssl 建议，OpenSSL 库。</p>
+</li>
+<li><p>msys-lndir 可选，Xorg 递归目录符号链接工具。</p>
+</li>
+<li><p>msys-mksh 可选，MirBSD Korn Shell，脚本解释器。</p>
+</li>
+<li><p>msys-mktemp 可选，创建临时文件或目录。</p>
+</li>
+<li><p>msys-openssh 建议，OpenSSH，SSH 客户端。</p>
+</li>
+<li><p>msys-openssl 建议，OpenSSL 工具。</p>
+</li>
+<li><p>msys-perl 建议，Perl 解释器。</p>
+</li>
+<li><p>msys-rsync 建议，文件传输程序。</p>
+</li>
+<li><p>msys-vim 可选，控制台下的文件编辑器。</p>
+</li>
+<li><p>MSYS System Builder</p>
+</li>
+<li><p>这个是用于编译用于 MSYS 系统的程序的编译器，一般不需要</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/cmder快捷键/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/06/cmder快捷键/" itemprop="url">cmder快捷键</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:46:54+08:00">
+                2019-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>Cmder常用快捷键</p>
+</li>
+<li><ul>
+<li>Tab：自动路径补全</li>
+<li>ctrl+T:建立新页签</li>
+<li>ctrl+W：关闭页签</li>
+<li>ctrl+tab：切换页签</li>
+<li>alt_f4:关闭所有页签</li>
+<li>alt+shift+1:开启cmd.exe</li>
+<li>alt+shift+2:开启powershell.exe</li>
+<li>alt+shift+3:开启powershell.exe（系统管理员权限）</li>
+<li>ctrl+1:快速切换到第一个页签</li>
+<li>ctrl+n:快速切换到第n个页签</li>
+<li>alt+enter:切换到全屏状态</li>
+<li>ctrl+r:历史命令搜索</li>
+</ul>
+</li>
+<li><p>可在视窗内搜寻画面上曾经出现过的任意字</p>
+</li>
+<li><p>新增页签按钮，可透过滑鼠新增页签</p>
+</li>
+<li><p>切换页签按钮，可透过滑鼠切换页签</p>
+</li>
+<li><p>锁定视窗，让视窗无法再输入</p>
+</li>
+<li><p>切换视窗是否提供卷轴功能，启动时可查询之前显示过的内容</p>
+</li>
+<li><p>按下滑鼠左键可开启系统菜单，滑鼠右键可开启工具选项视窗，win+alt+p开启工具选项视窗。</p>
+</li>
+</ol>
+<h3 id="Chocolatey软件包管理系统"><a href="#Chocolatey软件包管理系统" class="headerlink" title="Chocolatey软件包管理系统"></a>Chocolatey软件包管理系统</h3><p>在 Linux 下，大家喜欢用apt-get(mac下用brew)来安装应用程序，如今在 windows 下，大家可以使用Chocolatey来快速下载搭建一个开发环境。Chocolatey的哲学就是完全用命令行来安装应用程序， 它更像一个包管理工具（背后使用Nuget）</p>
+<p>另外需要说明的是，Chocolatey只是把官方下载路径封装到了Chocolatey中，所以下载源都是其官方路径，所以下载的一定是合法的，但是如果原软件是需要 Licence 注册的话，那么Chocolatey下载安装好的软件还是需要你去购买注册。不过Chocolatey一般还是会选用免费 Licence 可用的软件。</p>
+<p>安装chocolatey , 运行如下命令即可：</p>
+<p>@powershell -NoProfile -ExecutionPolicy unrestricted -Command “iex ((new-object net.webclient).DownloadString(‘<a href="https://chocolatey.org/install.ps1" target="_blank" rel="noopener">https://chocolatey.org/install.ps1</a>‘))” &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</p>
+<p>安装软件命令choco install softwareName, 短写是cinst softwareName可安装的应用程序，可以参见其 Package列表</p>
+<p>以下是window下开发常用的开发环境应用:</p>
+<ul>
+<li><p>choco install autohotkey.portable #安装 AutoHotkey (Portable) </p>
+</li>
+<li><p>choco install nodejs.install #安装 node </p>
+</li>
+<li><p>choco install git.install #安装 git </p>
+</li>
+<li><p>choco install ruby #安装 ruby </p>
+</li>
+<li><p>choco install python #安装 python </p>
+</li>
+<li><p>choco install jdk8 #安装 JDK8 </p>
+</li>
+<li><p>choco install googlechrome #安装 Chrome </p>
+</li>
+<li><p>choco install google-chrome-x64 #Google Chrome (64-bit only) </p>
+</li>
+<li><p>choco install firefox #安装 firefox </p>
+</li>
+<li><p>choco install notepadplusplus.install #安装 notepad++ </p>
+</li>
+<li><p>choco install Atom #安装 Atom </p>
+</li>
+<li><p>choco install SublimeText3 #安装 SublimeText3</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/重装系统后重新部署hexo（借鉴）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -364,7 +1182,6 @@
           
             <p>借鉴自：<a href="https://www.jianshu.com/p/906294181814" target="_blank" rel="noopener">https://www.jianshu.com/p/906294181814</a></p>
 <p>但自己没有用到</p>
-<hr>
 <p>必须拷贝文件：</p>
 <p>├──_config.yml<br>├── theme<br>├── scaffolds #文章模板<br>├── package.json #说明使用哪些包<br>├── .gitignore #限定在提交的时候哪些文件可以忽略<br>└── source</p>
 <p>（1）讨论下哪些文件是必须拷贝的：首先是之前自己修改的文件，像站点配置_config.yml，theme文件夹里面的主题，以及source里面自己写的博客文件，这些肯定要拷贝的。除此之外，还有三个文件需要有，就是scaffolds文件夹（文章的模板）、package.json（说明使用哪些包）和.gitignore（限定在提交的时候哪些文件可以忽略）。其实，这三个文件不是我们修改的，所以即使丢失了，也没有关系，我们可以建立一个新的文件夹，然后在里面执行hexo init，就会生成这三个文件，我们只需要将它们拷贝过来使用即可。总结：_config.yml，theme/，source/，scaffolds/，package.json，.gitignore，是需要拷贝的。</p>
@@ -417,7 +1234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/10/21/saySomethingForParents/">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/10/18/markdown快捷键/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DarlingCake">
@@ -436,279 +1253,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/21/saySomethingForParents/" itemprop="url">Say Something For Parents</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-21T13:50:13+08:00">
-                2018-10-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="不知道为什么，总是说不明白"><a href="#不知道为什么，总是说不明白" class="headerlink" title="不知道为什么，总是说不明白"></a>不知道为什么，总是说不明白</h1><p>交流的过程确实有很强的技巧，但仅以爱为名，平心而论，我希望我们有的是交流，而不是交流的技巧。</p>
-<h3 id="1-或许谈话，我们有时只是想炫耀一下"><a href="#1-或许谈话，我们有时只是想炫耀一下" class="headerlink" title="1. 或许谈话，我们有时只是想炫耀一下"></a>1. 或许谈话，我们有时只是想炫耀一下</h3><p><img src="img/SWFP/2.jpg"></p>
-<h3 id="2-正因为亲密，所以肆无忌惮的争辩"><a href="#2-正因为亲密，所以肆无忌惮的争辩" class="headerlink" title="2. 正因为亲密，所以肆无忌惮的争辩"></a>2. 正因为亲密，所以肆无忌惮的争辩</h3><h3 id="3-你们提供的是可能，而非必选"><a href="#3-你们提供的是可能，而非必选" class="headerlink" title="3. 你们提供的是可能，而非必选"></a>3. 你们提供的是可能，而非必选</h3><h3 id="3-我并不想一直在否定自己"><a href="#3-我并不想一直在否定自己" class="headerlink" title="3. 我并不想一直在否定自己"></a>3. 我并不想一直在否定自己</h3><h3 id="4-交谈为何总是处于一种地位不平等"><a href="#4-交谈为何总是处于一种地位不平等" class="headerlink" title="4. 交谈为何总是处于一种地位不平等"></a>4. 交谈为何总是处于一种地位不平等</h3><h3 id="5-做个朋友有这么难吗？"><a href="#5-做个朋友有这么难吗？" class="headerlink" title="5. 做个朋友有这么难吗？"></a>5. 做个朋友有这么难吗？</h3><h3 id="6-希望自己能温和谦逊的交谈"><a href="#6-希望自己能温和谦逊的交谈" class="headerlink" title="6. 希望自己能温和谦逊的交谈"></a>6. 希望自己能温和谦逊的交谈</h3><h3 id="7-希望你们能不针对交流方式的讨论"><a href="#7-希望你们能不针对交流方式的讨论" class="headerlink" title="7. 希望你们能不针对交流方式的讨论"></a>7. 希望你们能不针对交流方式的讨论</h3><p>为什么总是我们要改，你们只要负责，负责好好交流就OK。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/10/20/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DarlingCake">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr. He's hippo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/20/test/" itemprop="url">test</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-20T20:41:34+08:00">
-                2018-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/11/" itemprop="url" rel="index">
-                    <span itemprop="name">11</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><div id="flowchart-0" class="flow-chart"></div><br>```</p>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
-op=>operation: My Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
-&</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/10/18/a-little/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DarlingCake">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr. He's hippo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/18/a-little/" itemprop="url">a little</a></h1>
+                <a class="post-title-link" href="/2018/10/18/markdown快捷键/" itemprop="url">markdown快捷键</a></h1>
         
 
         <div class="post-meta">
@@ -984,7 +1529,7 @@ cond(no)->op
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/01/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2018/01/04/写一篇博客1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DarlingCake">
@@ -1003,7 +1548,7 @@ cond(no)->op
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/04/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/01/04/写一篇博客1/" itemprop="url">写一篇博客1</a></h1>
         
 
         <div class="post-meta">
@@ -1171,7 +1716,7 @@ cond(no)->op
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
