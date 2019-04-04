@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -214,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -224,7 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -291,6 +291,283 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/04/04/gitbash中的vim操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/04/gitbash中的vim操作/" itemprop="url">gitbash中的vim操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T15:13:02+08:00">
+                2019-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在git bash新建文件夹命令是 mkdir+文件夹名。新建文件有两种方式：</p>
+<ul>
+<li>touch+文件名，直接新建一个文件</li>
+<li>vi+文件名，新建并用vi打开</li>
+</ul>
+<p>查看命令</p>
+<ul>
+<li>cat查看其内容：cat  /usr/local/con.cfg</li>
+</ul>
+<h3 id="1-vi-amp-vim-有两种工作模式"><a href="#1-vi-amp-vim-有两种工作模式" class="headerlink" title="1.vi &amp; vim 有两种工作模式"></a>1.vi &amp; vim 有两种工作模式</h3><ol>
+<li>命令模式：接受、执行 vi &amp; vim 操作命令的模式，打开文件后的默认模式；</li>
+<li><p>编辑模式：对打开的文件内容进行 增、删、改 操作的模式；</p>
+<p>#在编辑模式下按下 ESC 键，回退到命令模式。</p>
+</li>
+</ol>
+<h3 id="2-创建、打开文件：-vi-filename"><a href="#2-创建、打开文件：-vi-filename" class="headerlink" title="2.创建、打开文件：$ vi [filename]"></a>2.创建、打开文件：$ vi [filename]</h3><ol>
+<li>使用 vi 加 文件路径（或文件名）的模式打开文件，如果文件存在则打开现有文件，如果文件不存在则新建文件，并在终端最下面一行显示打开的是一个新文件。</li>
+<li>键盘输入字母 “i”或“Insert”键进入最常用的插入编辑模式。</li>
+</ol>
+<h3 id="3-保存文件"><a href="#3-保存文件" class="headerlink" title="3.保存文件"></a>3.保存文件</h3><ol>
+<li>在插入编辑模式下编辑文件。</li>
+<li>按下 “ESC” 键，退出编辑模式，切换到命令模式。</li>
+<li>在命令模式下键入”ZZ”或者”:wq”保存修改并且退出 vi 。</li>
+<li>如果只想保存文件，则键入”:w”，回车后底行会提示写入操作结果，并保持停留在命令模式。</li>
+</ol>
+<h3 id="4-放弃所有文件修改"><a href="#4-放弃所有文件修改" class="headerlink" title="4.放弃所有文件修改"></a>4.放弃所有文件修改</h3><ol>
+<li>放弃所有文件修改：按下 “ESC” 键进入命令模式，键入 “:q!” 回车后放弃修改并退出vi。</li>
+<li>放弃所有文件修改，但不退出 vi ，即回退到文件打开后最后一次保存操作的状态，继续进行文件操作：按下 “ESC” 键进入命令模式，键入 “:e!” ，回车后回到命令模式。</li>
+</ol>
+<h3 id="5-sudo-in建立连接"><a href="#5-sudo-in建立连接" class="headerlink" title="5.sudo in建立连接"></a>5.sudo in建立连接</h3><p>ln用于建立硬连接<br>ln -s 用于建立符号连接（又称软连接）</p>
+<p>sudo ln -s /etc /etc/rc.d</p>
+<p>sudo ln -s /lib/x86_64-linux-gnu/libgcc_s.so.1 /lib64/</p>
+<p>sudo ln -s /usr/bin/awk /bin/awk</p>
+<p>sudo ln -s /usr/bin/basename /bin/basename</p>
+<p>sudo ln -s /usr/bin/rpm /bin/rpm</p>
+<p>sudo ln -s /usr/lib/x86_64-linux-gnu/libc_nonshared.a /usr/lib64/libc_nonshared.a</p>
+<p>sudo ln -s /usr/lib/x86_64-linux-gnu/libpthread_nonshared.a /usr/lib64/libpthread_nonshared.a</p>
+<p>sudo ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6 /lib64/</p>
+<p>sudo ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6 /usr/lib64/</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/16/day4-PmAbeVowsToTackleGrowingChildAbuseInJapan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DarlingCake">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. He's hippo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/day4-PmAbeVowsToTackleGrowingChildAbuseInJapan/" itemprop="url">day4_PmAbeVowsToTackleGrowingChildAbuseInJapan</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-16T22:26:21+08:00">
+                2019-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://DarlingCake.github.io/2019/02/06/github快捷键/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -320,7 +597,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T22:00:28+08:00">
                 2019-02-06
@@ -487,7 +764,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:57:30+08:00">
                 2019-02-06
@@ -616,7 +893,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:50:54+08:00">
                 2019-02-06
@@ -956,7 +1233,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:46:54+08:00">
                 2019-02-06
@@ -1138,7 +1415,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T21:27:33+08:00">
                 2019-02-06
@@ -1263,7 +1540,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-18T10:47:44+08:00">
                 2018-10-18
@@ -1284,7 +1561,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1558,7 +1835,7 @@ cond(no)->op
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T11:45:41+08:00">
                 2018-01-04
@@ -1579,7 +1856,7 @@ cond(no)->op
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1716,8 +1993,8 @@ cond(no)->op
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -1728,7 +2005,7 @@ cond(no)->op
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">Kategorien</span>
                 </a>
               </div>
             
@@ -1739,7 +2016,7 @@ cond(no)->op
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
@@ -1801,7 +2078,7 @@ cond(no)->op
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
